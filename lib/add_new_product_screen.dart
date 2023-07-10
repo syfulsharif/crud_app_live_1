@@ -17,40 +17,42 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextFormField(
-              decoration: appInputDecoration('Product Name'),
-            ),
-            TextFormField(
-              decoration: appInputDecoration('Product Code'),
-            ),
-            TextFormField(
-              decoration: appInputDecoration('Price'),
-            ),
-            TextFormField(
-              decoration: appInputDecoration('Quantity'),
-            ),
-            TextFormField(
-              decoration: appInputDecoration('Total Price'),
-            ),
-            TextFormField(
-              decoration: appInputDecoration('Image'),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 12)
-                ),
-                onPressed: () {},
-                child: const Text('Add'),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: appInputDecoration('Product Name'),
               ),
-            ),
-          ],
+              TextFormField(
+                decoration: appInputDecoration('Product Code'),
+              ),
+              TextFormField(
+                decoration: appInputDecoration('Price'),
+              ),
+              TextFormField(
+                decoration: appInputDecoration('Quantity'),
+              ),
+              TextFormField(
+                decoration: appInputDecoration('Total Price'),
+              ),
+              TextFormField(
+                decoration: appInputDecoration('Image'),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 12)
+                  ),
+                  onPressed: () {},
+                  child: const Text('Add'),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

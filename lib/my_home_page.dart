@@ -30,9 +30,49 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView.separated(
         itemCount: 10,
         itemBuilder: (context, index) {
-          return const ListTile(
-            title: Text('Product Name'),
-            subtitle: Column(
+          return ListTile(
+            onLongPress: () {
+              showDialog(
+                  context: context,
+                  builder: (_) {
+                    return AlertDialog(
+                      // titlePadding: EdgeInsets.only(left: 20),
+                      contentPadding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
+                      title: Row(
+                        children: [
+                          const Text('Choose an Action'),
+                          const Spacer(),
+                          IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: const Icon(Icons.close),
+                          )
+                        ],
+                      ),
+                      content: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ListTile(
+                            onTap: () {},
+                            leading: const Icon(Icons.edit),
+                            title: const Text('Update'),
+                          ),
+                          const Divider(
+                            height: 0,
+                          ),
+                          ListTile(
+                            onTap: () {},
+                            leading: const Icon(Icons.delete),
+                            title: const Text('Delete'),
+                          ),
+                        ],
+                      ),
+                    );
+                  });
+            },
+            title: const Text('Product Name'),
+            subtitle: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('Product Code'),
@@ -40,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text('Available Units'),
               ],
             ),
-            leading: Icon(
+            leading: const Icon(
               Icons.image,
               size: 32,
             ),
