@@ -21,34 +21,31 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
           child: Column(
             children: [
               TextFormField(
-                decoration: appInputDecoration('Product Name'),
-              ),
-              TextFormField(
-                decoration: appInputDecoration('Product Code'),
-              ),
-              TextFormField(
-                decoration: appInputDecoration('Price'),
-              ),
-              TextFormField(
-                decoration: appInputDecoration('Quantity'),
-              ),
-              TextFormField(
-                decoration: appInputDecoration('Total Price'),
-              ),
-              TextFormField(
-                decoration: appInputDecoration('Image'),
+                decoration: const InputDecoration(
+                  hintText: ('Product Name'),
+                ),
               ),
               const SizedBox(
-                height: 16,
+                height: 8,
               ),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 12)
-                  ),
-                  onPressed: () {},
-                  child: const Text('Add'),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: ('Product Code'),
+              ),
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: ('Product Price),
+                ),
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: ('Product Code'),
+                ),
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: ('Product Code'),
                 ),
               ),
             ],

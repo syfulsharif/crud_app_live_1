@@ -37,7 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   builder: (_) {
                     return AlertDialog(
                       // titlePadding: EdgeInsets.only(left: 20),
-                      contentPadding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
+                      contentPadding:
+                          const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       title: Row(
                         children: [
                           const Text('Choose an Action'),
@@ -80,11 +81,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text('Available Units'),
               ],
             ),
-            leading: const Icon(
-              Icons.image,
-              size: 32,
+            leading: Image.network(
+              'https://uploads.teamtreehouse.com/production/profile-photos/10819390/ipad_small_2x_6-01.jpg',
+              width: 50,
+              errorBuilder: (_, __, ___) {
+                return const Icon(
+                  Icons.image,
+                  size: 32,
+                );
+              },
             ),
-            trailing: Text('Unit Price'),
+            trailing: const Text('Unit Price'),
           );
         },
         separatorBuilder: (BuildContext context, int index) {
